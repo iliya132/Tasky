@@ -1,0 +1,42 @@
+﻿<Window x:Class="Tasky.Views.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tasky.Views"
+        mc:Ignorable="d"
+        Title="Login" Height="400" Width="600" WindowStyle="SingleBorderWindow" ResizeMode="NoResize">
+    <Window.Resources>
+        <ResourceDictionary Source="../res/StyleResources.xaml"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Background="{DynamicResource WindowContrast}">
+            <StackPanel Margin="17 30">
+                <TextBlock Text="Добро пожаловать в Tasky!" Style="{StaticResource textblock-h1}"/>
+                <TextBlock Text="Tasky это инструмент для взаимодействия внутри команды." Margin="0 14" Style="{StaticResource textblock-regular}"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Впервые работаете с Tasky? " Style="{StaticResource textblock-regular}" />
+                    <TextBlock Style="{StaticResource textblock-regular}">
+                        <Hyperlink NavigateUri="http://www.google.com">
+                            <TextBlock Text="Пройдите обучение" Style="{StaticResource textblock-regular-hyperlink}"/>
+                        </Hyperlink>
+                    </TextBlock>
+                    
+                </StackPanel>
+                
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="20 48 0 46" VerticalAlignment="Bottom">
+                <Button Style="{StaticResource Button-Black}" Content="Войти как Илья"/>
+                <Button Style="{StaticResource Button-Black}" Content="Войти как другой пользователь" Margin="25 0 0 0"/>
+            </StackPanel>
+        </Grid>
+        <Grid Grid.Column="1" Background="{DynamicResource WindowBackground}">
+            <Image Source="../res/TaskyLogo.png" Width="53" Height="53" Margin="0 100" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock Text="Планировщик Tasky" Margin="0 165 0 89" HorizontalAlignment="Center" Style="{StaticResource text-h2-white}"/>
+        </Grid>
+    </Grid>
+</Window>

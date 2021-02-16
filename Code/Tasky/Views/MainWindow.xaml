@@ -5,11 +5,120 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tasky.Views"
         mc:Ignorable="d"
-        Title="Tasky" Height="450" Width="800">
+        Title="Tasky" Height="748" Width="1278" WindowStartupLocation="CenterScreen">
     <Window.Resources>
-        <ResourceDictionary Source="../res/StyleResources.xaml"/>
+        <ResourceDictionary Source="../StyleResources.xaml"/>
     </Window.Resources>
-    <Grid>
-        
+    <Grid Style="{StaticResource MainGrid}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="280"/>
+            <ColumnDefinition Width="349*"/>
+            <ColumnDefinition Width="649*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="68.848"/>
+            <RowDefinition Height="68.506"/>
+            <RowDefinition/>
+            <RowDefinition Height="68.964"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Column="1" Grid.RowSpan="4" Grid.Row="0" BorderThickness="1 0 0 0" BorderBrush="#FF424949">
+            
+            <Border.Effect>
+                <DropShadowEffect Direction="0" ShadowDepth="2" BlurRadius="4" Color="Black"/>
+            </Border.Effect>
+            
+        </Border>
+        <Grid Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Background="{StaticResource WindowContrast}">
+            <Border Grid.Column="1" Panel.ZIndex="1" Grid.RowSpan="4" Grid.Row="0" BorderThickness="1 0 0 0" BorderBrush="#FF424949">
+                <Border.Effect>
+                    <DropShadowEffect Direction="0" ShadowDepth="2" BlurRadius="4" Color="#FF313737"/>
+                </Border.Effect>
+            </Border>
+            <TextBox Style="{StaticResource SearchField}"  VerticalAlignment="Stretch"/>
+        </Grid>
+
+        <Grid Grid.Column="0" Grid.Row="0" Background="#FF424949">
+            <Border BorderThickness="0 0 0 1" BorderBrush="{StaticResource BorderColor}"/>
+            <Button Style="{StaticResource button-transparent}">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image Source="/res/homeWhite.png" Width="21" Height="21"/>
+                    <TextBlock Text="Tasky" Style="{StaticResource text-h1-white}" Margin="5 5 0 0"/>
+                </StackPanel>
+            </Button>
+        </Grid >
+        <Grid Grid.Column="0" Grid.Row="1" Panel.ZIndex="1" Background="#FF424949">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Margin="0 0 38 0" Style="{StaticResource Button-Circle}">
+                    <Image Source="/res/settings.png" Width="20" Height="20"/>
+                </Button>
+                <Button Style="{StaticResource Button-Circle}">
+                    <Image Source="/res/settings.png" Width="20" Height="20"/>
+                </Button>
+                <Button Margin="38 0 0 0" Style="{StaticResource Button-Circle}">
+                    <Image Source="/res/settings.png" Width="20" Height="20"/>
+                </Button>
+            </StackPanel>
+        </Grid >
+        <Grid Grid.Column="0" Grid.Row="2" Grid.RowSpan="2" Background="#FF424949">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="132*"/>
+                <RowDefinition Height="422*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Border BorderThickness="0 0 0 1" BorderBrush="{StaticResource BorderColor}"/>
+                <TextBlock Text="Лебедев Илья Викторович" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0 12 0 0" Style="{StaticResource text-regular-white}"/>
+                <ProgressBar VerticalAlignment="Center" HorizontalAlignment="Center" Value="50" Height="8" Width="219" Style="{StaticResource PositiveProgressBarStyle}" Margin="0 0 0 20"/>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 0 0 16">
+                    <StackPanel Orientation="Vertical" Width="74">
+                        <TextBlock Text="Завершено:" HorizontalAlignment="Center" Style="{StaticResource text-regular-white}"/>
+                        <TextBlock Text="12" HorizontalAlignment="Center" Style="{StaticResource text-h2-white}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Width="74">
+                        <TextBlock Text="В работе:" HorizontalAlignment="Center" Style="{StaticResource text-regular-white}"/>
+                        <TextBlock Text="7" HorizontalAlignment="Center" Style="{StaticResource text-h2-white}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Width="74">
+                        <TextBlock Text="Всего:" HorizontalAlignment="Center" Style="{StaticResource text-regular-white}"/>
+                        <TextBlock Text="243" HorizontalAlignment="Center" Style="{StaticResource text-h2-white}"/>
+                    </StackPanel>
+                </StackPanel>
+
+            </Grid>
+            <StackPanel Grid.Row="1" Grid.RowSpan="2">
+                <TextBlock Style="{StaticResource text-h2-white}" Text="Комнаты" Margin="28 13 0 0"/>
+                <Button Style="{StaticResource button-transparent}" HorizontalContentAlignment="Left" Margin="28 8 0 0">
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse Stroke="White" StrokeThickness="2" Height="10" Width="10" Margin="0 0 10 0"/>
+                        <TextBlock Text="Руководство" Style="{StaticResource text-small-b}"/>
+                    </StackPanel>
+                </Button>
+                <Button Style="{StaticResource button-transparent}" HorizontalContentAlignment="Left" Margin="28 8 0 0">
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse Stroke="Orange" StrokeThickness="2" Height="10" Width="10" Margin="0 0 10 0"/>
+                        <TextBlock Text="Проектная работа" Style="{StaticResource text-small-b}"/>
+                    </StackPanel>
+                </Button>
+                <Button Style="{StaticResource button-transparent}" HorizontalContentAlignment="Left" Margin="28 8 0 0">
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse Stroke="Yellow" StrokeThickness="2" Height="10" Width="10" Margin="0 0 10 0"/>
+                        <TextBlock Text="Личные задачи" Style="{StaticResource text-small-b}"/>
+                    </StackPanel>
+                </Button>
+                <Button Style="{StaticResource button-transparent}" HorizontalContentAlignment="Left" Margin="28 8 0 0">
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse Stroke="LightBlue" StrokeThickness="2" Height="10" Width="10" Margin="0 0 10 0"/>
+                        <TextBlock Text="Мой отдел" Style="{StaticResource text-small-b}"/>
+                    </StackPanel>
+                </Button>
+                <Button Style="{StaticResource button-transparent}" HorizontalContentAlignment="Left" Margin="28 8 0 0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="+   Добавить комнату" Style="{StaticResource text-small-b}"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Grid >
+        <Grid Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="2">
+            <ContentControl/>
+        </Grid>
     </Grid>
 </Window>

@@ -96,8 +96,8 @@
     <Resource Include="res\settings.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="res\StyleResources.xaml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <Resource Include="StyleResources.xaml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="res\TaskyLogo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

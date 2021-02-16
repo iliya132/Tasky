@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Tasky.Views"
         mc:Ignorable="d"
-        Title="Login" Height="400" Width="600" WindowStyle="SingleBorderWindow" ResizeMode="NoResize">
+        Title="Login" Height="400" Width="600" WindowStyle="SingleBorderWindow" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Resources>
-        <ResourceDictionary Source="../res/StyleResources.xaml"/>
+        <ResourceDictionary Source="../StyleResources.xaml"/>
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -30,7 +30,7 @@
                 
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="20 48 0 46" VerticalAlignment="Bottom">
-                <Button Style="{StaticResource Button-Black}" Content="Войти как Илья"/>
+                <Button Style="{StaticResource Button-Black}" Content="Войти как Илья" Click="Button_Click_1"/>
                 <Button Style="{StaticResource Button-Black}" Content="Войти как другой пользователь" Margin="25 0 0 0"/>
             </StackPanel>
         </Grid>

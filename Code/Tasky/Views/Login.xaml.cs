@@ -26,5 +26,12 @@ namespace Tasky.Views
         {
             Environment.Exit(0);
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            Close();
+            mainWindow.Show();
+        }
     }
 }

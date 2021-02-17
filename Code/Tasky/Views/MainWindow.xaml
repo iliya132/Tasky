@@ -22,22 +22,40 @@
             <RowDefinition Height="68.964"/>
         </Grid.RowDefinitions>
         <Border Grid.Column="1" Grid.RowSpan="4" Grid.Row="0" BorderThickness="1 0 0 0" BorderBrush="#FF424949">
-            
             <Border.Effect>
-                <DropShadowEffect Direction="0" ShadowDepth="2" BlurRadius="4" Color="Black"/>
+                <DropShadowEffect Direction="0" ShadowDepth="0" BlurRadius="15" Color="Black"/>
             </Border.Effect>
-            
+        </Border>
+        <Border Grid.Column="1" Grid.RowSpan="4" Grid.Row="0" BorderThickness="1 0 0 0" BorderBrush="#FF424949">
+            <Border.Effect>
+                <DropShadowEffect Direction="0" ShadowDepth="0" BlurRadius="15" Color="Black"/>
+            </Border.Effect>
+        </Border>
+        <Border Grid.Column="1" Grid.RowSpan="4" Grid.Row="0" BorderThickness="1 0 0 0" BorderBrush="#FF424949">
+            <Border.Effect>
+                <DropShadowEffect Direction="0" ShadowDepth="0" BlurRadius="15" Color="Black"/>
+            </Border.Effect>
         </Border>
         <Grid Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Background="{StaticResource WindowContrast}">
             <Border Grid.Column="1" Panel.ZIndex="1" Grid.RowSpan="4" Grid.Row="0" BorderThickness="1 0 0 0" BorderBrush="#FF424949">
                 <Border.Effect>
-                    <DropShadowEffect Direction="0" ShadowDepth="2" BlurRadius="4" Color="#FF313737"/>
+                    <DropShadowEffect Direction="0" ShadowDepth="0" BlurRadius="15" Color="Black"/>
+                </Border.Effect>
+            </Border>
+            <Border Grid.Column="1" Panel.ZIndex="1" Grid.RowSpan="4" Grid.Row="0" BorderThickness="1 0 0 0" BorderBrush="#FF424949">
+                <Border.Effect>
+                    <DropShadowEffect Direction="0" ShadowDepth="0" BlurRadius="15" Color="Black"/>
+                </Border.Effect>
+            </Border>
+            <Border Grid.Column="1" Panel.ZIndex="1" Grid.RowSpan="4" Grid.Row="0" BorderThickness="1 0 0 0" BorderBrush="#FF424949">
+                <Border.Effect>
+                    <DropShadowEffect Direction="0" ShadowDepth="0" BlurRadius="15" Color="Black"/>
                 </Border.Effect>
             </Border>
             <TextBox Style="{StaticResource SearchField}"  VerticalAlignment="Stretch"/>
         </Grid>
 
-        <Grid Grid.Column="0" Grid.Row="0" Background="#FF424949">
+        <Grid Grid.Column="0" Grid.Row="0" Background="{StaticResource WindowBackground}">
             <Border BorderThickness="0 0 0 1" BorderBrush="{StaticResource BorderColor}"/>
             <Button Style="{StaticResource button-transparent}">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -46,7 +64,7 @@
                 </StackPanel>
             </Button>
         </Grid >
-        <Grid Grid.Column="0" Grid.Row="1" Panel.ZIndex="1" Background="#FF424949">
+        <Grid Grid.Column="0" Grid.Row="1" Panel.ZIndex="1" Background="{StaticResource WindowBackground}">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button Margin="0 0 38 0" Style="{StaticResource Button-Circle}">
                     <Image Source="/res/settings.png" Width="20" Height="20"/>
@@ -59,7 +77,7 @@
                 </Button>
             </StackPanel>
         </Grid >
-        <Grid Grid.Column="0" Grid.Row="2" Grid.RowSpan="2" Background="#FF424949">
+        <Grid Grid.Column="0" Grid.Row="2" Grid.RowSpan="2" Background="{StaticResource WindowBackground}">
             <Grid.RowDefinitions>
                 <RowDefinition Height="132*"/>
                 <RowDefinition Height="422*"/>
@@ -117,8 +135,8 @@
                 </Button>
             </StackPanel>
         </Grid >
-        <Grid Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="2">
-            <ContentControl/>
+        <Grid Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="2" Panel.ZIndex="-1">
+            <ContentControl x:Name="ContentSite"/>
         </Grid>
     </Grid>
 </Window>

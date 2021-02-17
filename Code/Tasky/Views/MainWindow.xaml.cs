@@ -1,5 +1,7 @@
 ﻿using System.Windows;
 
+using Tasky.Views.ContentViews;
+
 namespace Tasky.Views
 {
     /// <summary>
@@ -10,6 +12,7 @@ namespace Tasky.Views
         public MainWindow()
         {
             InitializeComponent();
+            ContentSite.Content = new HomePage();
         }
     }
 }

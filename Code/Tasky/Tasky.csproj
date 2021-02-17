@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="res\ArrowDown.png" />
     <None Remove="res\attach.png" />
     <None Remove="res\checkmark.png" />
     <None Remove="res\checkmarkGreen.png" />
@@ -45,6 +46,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="res\ArrowDown.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="res\attach.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
